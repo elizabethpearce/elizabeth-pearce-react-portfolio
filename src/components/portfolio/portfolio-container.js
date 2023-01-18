@@ -46,7 +46,7 @@ export default class PortfolioContainer extends Component {
         });
     }
 
-    componentDidMount() {
+    UNSAFE_componentDidMount() {
         this.getPortfolioItems();
     }
 

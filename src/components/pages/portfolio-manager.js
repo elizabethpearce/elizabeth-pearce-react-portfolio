@@ -17,6 +17,7 @@ export default class PortfolioManager extends Component {
     this.handleDeleteClick = this.handleDeleteClick.bind(this);
     this.handleEditClick = this.handleEditClick.bind(this);
     this.clearPortfolioToEdit = this.clearPortfolioToEdit.bind(this);
+
   }
 
   clearPortfolioToEdit() {
@@ -70,7 +71,7 @@ export default class PortfolioManager extends Component {
     })
   }
 
-  componentDidMount() {
+  UNSAFE_componentDidMount() {
     this.getPortfolioItems();
   }
 
