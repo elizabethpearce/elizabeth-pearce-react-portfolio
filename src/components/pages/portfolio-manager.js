@@ -71,7 +71,7 @@ export default class PortfolioManager extends Component {
     })
   }
 
-  UNSAFE_componentDidMount() {
+  componentDidMount() {
     this.getPortfolioItems();
   }
 
