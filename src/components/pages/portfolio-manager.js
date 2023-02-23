@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import PortfolioSidebarList from "../portfolio/portfolio-sidebar-list"
+import PortfolioSidebarList from "../portfolio/portfolio-sidebar-list";
 import PortfolioForm from '../portfolio/portfolio-form';
 
 export default class PortfolioManager extends Component {
@@ -9,7 +9,8 @@ export default class PortfolioManager extends Component {
     super();
 
     this.state = {
-      portfolioItems: []
+      portfolioItems: [],
+      portfolioToEdit: {}
     };
 
     this.handleSuccessfulFormSubmission = this.handleSuccessfulFormSubmission.bind(this);
@@ -29,7 +30,7 @@ export default class PortfolioManager extends Component {
   handleEditClick(portfolioItem) {
     this.setState({
       portfolioToEdit: portfolioItem
-    })
+    });
   }
 
   handleDeleteClick(portfolioItem) {
@@ -46,7 +47,7 @@ export default class PortfolioManager extends Component {
       return response.data;
     }).catch(error => {
       console.log("handleDeleteClickError", error);
-    })
+    });
   }
 
   handleSuccessfulFormSubmission(portfolioItem) {
@@ -65,10 +66,10 @@ export default class PortfolioManager extends Component {
     }).then(response => {
       this.setState({
         portfolioItems: [...response.data.portfolio_items]
-      })
+      });
     }).catch(error => {
       console.log("error in getPortfolioItems", error);
-    })
+    });
   }
 
   componentDidMount() {

@@ -23,10 +23,7 @@ export default class Login extends Component {
   }
 
   handleSubmit(event) {
-    axios
-      .post(
-        "https://api.devcamp.space/sessions",
-        {
+    axios.post("https://api.devcamp.space/sessions", {
           client: {
             email: this.state.email,
             password: this.state.password
@@ -43,8 +40,7 @@ export default class Login extends Component {
           });
           this.props.handleUnsuccessfulAuth();
         }
-      })
-      .catch(error => {
+      }).catch(error => {
         this.setState({
           errorText: "An error occurred"
         });
@@ -78,7 +74,7 @@ export default class Login extends Component {
           />
 
           <div>
-            <button type="submit">Login</button>
+            <button ClassName="btn" type="submit">Login</button>
           </div>
         </form>
       </div>
