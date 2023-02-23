@@ -5,7 +5,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faSignOutAlt, faEdit } from "@fortawesome/free-solid-svg-icons";
 
-import NavigationContainer from "./navigation/navigation.container.js";
+import NavigationContainer from "./navigation/navigation-container.js";
 import Home from "./pages/home.js";
 import About from "./pages/about.js";
 import Contact from "./pages/contact.js";

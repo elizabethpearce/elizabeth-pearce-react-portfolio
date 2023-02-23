@@ -20,7 +20,7 @@ export default class PortfolioForm extends Component {
       logo: "",
       editMode: false,
       apiUrl: "https://elizabethpearce.devcamp.space/portfolio/portfolio_items",
-      apiAction: 'post'
+      apiAction: "post"
     };
 
     this.handleChange = this.handleChange.bind(this);
