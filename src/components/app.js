@@ -13,6 +13,7 @@ import PortfolioManager from './pages/portfolio-manager.js';
 import PortfolioDetail from "./portfolio/portfolio-detail.js";
 import Auth from "./pages/auth.js";
 import NoMatch from "./pages/no-match";
+import portfolioDetail from './portfolio/portfolio-detail.js';
 
 
 export default class App extends Component {
@@ -121,15 +122,21 @@ export default class App extends Component {
                 )}
               />
 
-
               <Route
               path="/b/:slug"
               render={props => (
                 <BlogDetail {...props} loggedInStatus={this.state.loggedInStatus} />
               )}
               />
+
               <Route path="/portfolio-manager" component={PortfolioManager} />
+
               {this.state.loggedInStatus === "LOGGED_IN" ? this.authorizedPages() : null}
+              <Route component={NoMatch} />
+
+              {this.state.loggedInStatus === "LOGGED_IN" ? this.authorizedPages() : null}
+              <Route exact path="/portfolio/:slug" component={PortfolioDetail} />
+              
               <Route component={NoMatch} />
             </Switch>
           </div>
