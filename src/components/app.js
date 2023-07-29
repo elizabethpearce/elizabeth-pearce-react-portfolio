@@ -13,7 +13,6 @@ import PortfolioManager from './pages/portfolio-manager.js';
 import PortfolioDetail from "./portfolio/portfolio-detail.js";
 import Auth from "./pages/auth.js";
 import NoMatch from "./pages/no-match";
-import portfolioDetail from './portfolio/portfolio-detail.js';
 
 
 export default class App extends Component {

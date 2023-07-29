@@ -23,13 +23,13 @@
     a {
       font-size: 3.7em;
       cursor: pointer;
-      color: $teal;
+      color: $purple-pink;
       margin-right: 20px;
       margin-bottom: 20px;
       transition: 0.5s ease-in-out;
 
       &:hover {
-        color: $dark-teal;
+        color: $coral;
       }
     }
   }
@@ -41,11 +41,11 @@
 
     a {
       text-decoration: none;
-      color: $teal;
+      color: $purple-pink;
       transition: 0.5s ease-in-out;
 
       &:hover{
-        color: $dark-teal;
+        color: $coral;
       }
     }
 
